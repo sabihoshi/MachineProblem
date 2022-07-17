@@ -1,0 +1,20 @@
+[
+    {
+        "Copies": 1,
+        "Genre": "a",
+        "Id": 1,
+        "Image": "a",
+        "Production": "a",
+        "Rents": 0,
+        "Title": "a"
+    },
+    {
+        "Copies": 2,
+        "Genre": "b",
+        "Id": 2,
+        "Image": "b",
+        "Production": "b",
+        "Rents": 0,
+        "Title": "b"
+    }
+]
