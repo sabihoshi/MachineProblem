@@ -185,12 +185,12 @@ inline void MoveCursor(const CursorDirection direction, const short amount = 1)
 	}
 }
 
-inline void WriteLine(const std::string& string = "")
+inline void WriteLine(const std::string& string = "", int stepDown = 1)
 {
 	SaveXY();
 	std::cout << string;
 	LoadXY();
-	MoveCursor(CursorDirection::Down);
+	MoveCursor(CursorDirection::Down, stepDown);
 }
 
 inline void CinReset()
@@ -200,7 +200,7 @@ inline void CinReset()
 }
 
 template <typename T>
-T Prompt(const std::string& prompt)
+T Prompt(const std::string& prompt, int stepDown = 1)
 {
 	while (true)
 	{
@@ -221,14 +221,13 @@ T Prompt(const std::string& prompt)
 
 		CinReset();
 		LoadXY();
-		MoveCursor(CursorDirection::Down);
+		MoveCursor(CursorDirection::Down, stepDown);
 		return input;
 	}
 }
 
 template <>
-inline std::string Prompt<std::string>(const std::string& prompt)
-{
+inline std::string Prompt<std::string>(const std::string &prompt, int stepDown) {
 	while (true)
 	{
 		SaveXY();
@@ -248,7 +247,7 @@ inline std::string Prompt<std::string>(const std::string& prompt)
 		}
 
 		LoadXY();
-		MoveCursor(CursorDirection::Down);
+		MoveCursor(CursorDirection::Down, stepDown);
 		return input;
 	}
 }
