@@ -1,7 +1,9 @@
 #include <iostream>
+#ifdef _WIN32
 #include <Windows.h>
 #undef max
 #undef RGB
+#endif
 #include "Console.h"
 #include "Rental.h"
 
@@ -12,8 +14,10 @@ int Menu();
 
 int main()
 {
-    SetConsoleMode(ENABLE_VIRTUAL_TERMINAL_PROCESSING);
+#ifdef _WIN32
+	SetConsoleMode(ENABLE_VIRTUAL_TERMINAL_PROCESSING);
 	SetConsoleOutputCP(65001);
+#endif
 
 	Rental rental;
 	rental.LoadMovies(MoviePath);

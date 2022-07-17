@@ -5,20 +5,21 @@
 #include <iterator>
 #include <limits>
 #include <sstream>
+#ifdef _WIN32
 #include <Windows.h>
 
 inline void SetConsoleMode(const int mode)
 {
-  const auto hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-  DWORD dwMode = 0;
-  GetConsoleMode(hOut, &dwMode);
-  dwMode |= mode;
-  SetConsoleMode(hOut, dwMode);
+	const auto hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	DWORD dwMode = 0;
+	GetConsoleMode(hOut, &dwMode);
+	dwMode |= mode;
+	SetConsoleMode(hOut, dwMode);
 }
 
 #undef max
 #undef RGB
-
+#endif
 struct Coordinates
 {
 	int X;
@@ -251,5 +252,3 @@ inline std::string Prompt<std::string>(const std::string& prompt)
 		return input;
 	}
 }
-
-
