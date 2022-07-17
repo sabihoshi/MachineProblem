@@ -1,4 +1,4 @@
-﻿#include "Rental.h"
+#include "Rental.h"
 
 #include <fstream>
 #include <iostream>
@@ -6,21 +6,40 @@
 #include "Console.h"
 #include "json.hpp"
 
-void Box(Coordinates coord, const std::string& title, int length = 10)
+void Box(Coordinates coord, const std::string& title, int length = 3)
 {
 	Clear();
 	XY(coord);
-	std::string strips = RGB("• • • • • • • • • • • • • •", {255, 255, 0});
-	WriteLine("╔════════════════════════════════════════════════════════════════════════════╗");
+	std::string strips = RGB("• • • • • • • • • • •", {255, 255, 0});
+	WriteLine("╔════════════════════════════════════════════════════════════════╗");
 	WriteLine("║ " + strips + Center(title, 20) + strips + " ║");
-	WriteLine("╠════════════════════════════════════════════════════════════════════════════╣");
+	WriteLine("╠═══════════════════════╦════════════════════════════════════════╣");
 
 	for (int i = 0; i < length; ++i)
 	{
-		WriteLine("║                                                                            ║");
+                WriteLine("║                       ║                                        ║");
+                if (i == length - 1) continue;
+                WriteLine("╠═══════════════════════╬════════════════════════════════════════╣");
 	}
-	WriteLine("╚════════════════════════════════════════════════════════════════════════════╝");
+	WriteLine("╚═══════════════════════╩════════════════════════════════════════╝");
 	XY(coord.X + 2, coord.Y + 3);
+}
+
+void CleanBox(Coordinates coord, const std::string& title, int length = 1)
+{
+        Clear();
+        XY(coord);
+        std::string strips = RGB("• • • • • • • • • • •", {255, 255, 0});
+        WriteLine("╔════════════════════════════════════════════════════════════════╗");
+        WriteLine("║ " + strips + Center(title, 20) + strips + " ║");
+        WriteLine("╠════════════════════════════════════════════════════════════════╣");
+
+        for (int i = 0; i < length; ++i)
+        {
+          WriteLine("║                                                                ║");
+        }
+        WriteLine("╚════════════════════════════════════════════════════════════════╝");
+        XY(coord.X + 2, coord.Y + 3);
 }
 
 void Rental::LoadCustomers(const std::string& path)
@@ -146,14 +165,24 @@ Customer* Rental::GetCustomer(int customerId)
 
 void Rental::InsertMovieMenu()
 {
-	Box({7, 1}, "INSERT A MOVIE");
+	Box({27, 1}, "INSERT A MOVIE", 6);
+          Coordinates coord = {29, 4};
+          WriteLine("Video ID", 2);
+          WriteLine("Movie Title", 2);
+          WriteLine("Production", 2);
+          WriteLine("Genre", 2);
+          WriteLine("Movie Image Filename", 2);
+          WriteLine("Number of Copies");
+          XY(coord); MoveCursor(CursorDirection::Right, 24);
 
 	auto id = _movies.size() + 1;
-	auto title = Prompt<std::string>("Enter the movie title");
-	auto production = Prompt<std::string>("Enter the production company");
-	auto genre = Prompt<std::string>("Enter the movie genre");
-	auto image = Prompt<std::string>("Enter the movie image");
-	auto copies = Prompt<int>("Enter the number of copies");
+	WriteLine(std::to_string(_movies.size() + 1), 2);
+	auto title = Prompt<std::string>("", 2);
+	auto production = Prompt<std::string>("", 2);
+	auto genre = Prompt<std::string>("", 2);
+	auto image = Prompt<std::string>("", 2);
+	auto copies = Prompt<int>("", 2);
+	MoveCursor(CursorDirection::Left, 26);
 
 	Movie movie(id, title, production, genre, image, copies);
 	InsertMovie(movie);
@@ -161,22 +190,38 @@ void Rental::InsertMovieMenu()
 
 void Rental::RentMovieMenu()
 {
-	Box({7, 1}, "RENT A MOVIE");
-	auto movieId = Prompt<int>("Enter movie code: ");
-	auto customerId = Prompt<int>("Enter customer code: ");
-	auto movie = GetMovie(movieId);
+	Box({27, 1}, "RENT A MOVIE", 2);
+          Coordinates coord = {29, 4};
+          XY(coord);
+          WriteLine("Customer ID", 2);
+          WriteLine("Movie ID", 2);
+          XY(coord); MoveCursor(CursorDirection::Right, 24);
+
+	auto customerId = Prompt<int>("", 2);
+	auto movieId = Prompt<int>("", 2);
+	MoveCursor(CursorDirection::Left, 26);
+
 	auto customer = GetCustomer(customerId);
+	auto movie = GetMovie(movieId);
 	if (movie && customer)
 		RentMovie(*customer, movieId);
 	else
-		std::cout << "Movie or customer not found!" << std::endl;
+		WriteLine("Movie or customer not found!");
 }
 
 void Rental::ReturnMovieMenu()
 {
-	Box({7, 1}, "RETURN A MOVIE");
-	auto movieId = Prompt<int>("Enter movie code: ");
-	auto customerId = Prompt<int>("Enter customer code: ");
+	Box({27, 1}, "RETURN A MOVIE", 2);
+          Coordinates coord = {29, 4};
+          XY(coord);
+          WriteLine("Customer ID", 2);
+          WriteLine("Movie ID", 2);
+          XY(coord); MoveCursor(CursorDirection::Right, 24);
+
+	auto customerId = Prompt<int>("", 2);
+	auto movieId = Prompt<int>("", 2);
+	MoveCursor(CursorDirection::Left, 24);
+
 	auto movie = GetMovie(movieId);
 	auto customer = GetCustomer(customerId);
 	if (movie && customer)
@@ -185,31 +230,33 @@ void Rental::ReturnMovieMenu()
 		WriteLine("Movie or customer not found!");
 }
 
-void Rental::PrintMoviesRentedMenu() {}
-
 void Rental::PrintMovieMenu()
 {
-	Clear();
-	Box({7, 1}, "SHOW MOVIE DETAILS");
-	auto movieId = Prompt<int>("Enter movie code: ");
-	XY(35, 2);
-	auto table = Movie::GetTable();
-	auto movie = GetMovie(movieId);
-	if (movie)
-	{
-		table.Add(*movie);
-		table.Print();
-	}
-	else
-	{
-		WriteLine("Movie not found!");
-	}
+      Clear();
+        CleanBox({27, 1}, "SHOW MOVIE DETAILS");
+        Coordinates coord = {29, 4};
+        XY(coord);
+
+        auto movieId = Prompt<int>("Enter movie code ", 2);
+        MoveCursor(CursorDirection::Left, 2);
+
+        auto table = Movie::GetTable();
+        auto movie = GetMovie(movieId);
+        if (movie)
+        {
+                table.Add(*movie);
+                table.Print();
+        }
+        else
+        {
+                WriteLine("Movie not found!");
+        }
 }
 
 void Rental::PrintAllMoviesMenu()
 {
-	Clear();
-	XY(35, 2);
+      Clear();
+	XY(14, 2);
 	auto table = Movie::GetTable();
 	for (auto& v : _movies)
 	{
@@ -220,9 +267,11 @@ void Rental::PrintAllMoviesMenu()
 
 void Rental::CheckMovieAvailabilityMenu()
 {
-	Clear();
-	Box({7, 1}, "Check Movie Availability");
-	auto movieId = Prompt<int>("Enter movie code");
+      Clear();
+	CleanBox({27, 1}, "Check Movie Status");
+	auto movieId = Prompt<int>("Enter movie ID", 2);
+        MoveCursor(CursorDirection::Left, 2);
+
 	auto movie = GetMovie(movieId);
 	if (movie && movie->CanBeRented())
 	{
@@ -236,13 +285,41 @@ void Rental::CheckMovieAvailabilityMenu()
 
 void Rental::CustomerMaintenanceMenu()
 {
-	Clear();
-	Box({7, 1}, "CUSTOMER MAINTENANCE");
-	constexpr Color number = {255, 255, 0};
-	WriteLine("[" + RGB("1", number) + "] Add New Customer");
-	WriteLine("[" + RGB("2", number) + "] Show Customer Details");
-	WriteLine("[" + RGB("3", number) + "] List of Videos Rented");
-	auto choice = Prompt<int>("Enter choice");
+      Clear();
+        XY(50, 11);
+        constexpr Color lights = {255, 255, 0};
+        constexpr Color movie = {0, 68, 116};
+        constexpr Color rent = {45, 200, 255};
+        constexpr Color number = {255, 255, 0};
+        constexpr Color input = {146, 208, 80};
+        const std::string& light = RGB("•", lights);
+
+        XY(38, 0);
+        WriteLine("╔═════════════════════════════════════════════╗");
+        WriteLine("║ " + RGB("• • • • • • • • • • • • • • • • • • • • • •", lights) + " ║");
+        WriteLine("║ " + light + RGB("╔═╗╔═╦═══╦╗──╔╦══╦═══╗", movie) + RGB("╔═══╦═══╦═╗─╔╦════╗", rent) + light + " ║");
+        WriteLine("║ " + light + RGB("║║╚╝║║╔═╗║╚╗╔╝╠╣╠╣╔══╝", movie) + RGB("║╔═╗║╔══╣║╚╗║║╔╗╔╗║", rent) + light + " ║");
+        WriteLine("║ " + light + RGB("║╔╗╔╗║║─║╠╗║║╔╝║║║╚══╗", movie) + RGB("║╚═╝║╚══╣╔╗╚╝╠╝║║╚╝", rent) + light + " ║");
+        WriteLine("║ " + light + RGB("║║║║║║║─║║║╚╝║─║║║╔══╝", movie) + RGB("║╔╗╔╣╔══╣║╚╗║║─║║  ", rent) + light + " ║");
+        WriteLine("║ " + light + RGB("║║║║║║╚═╝║╚╗╔╝╔╣╠╣╚══╗", movie) + RGB("║║║╚╣╚══╣║─║║║─║║  ", rent) + light + " ║");
+        WriteLine("║ " + light + RGB("╚╝╚╝╚╩═══╝─╚╝─╚══╩═══╝", movie) + RGB("╚╝╚═╩═══╩╝─╚═╝─╚╝  ", rent) + light + " ║");
+        WriteLine("║ " + RGB("• • • • • • • • • • • • • • • • • • • • • •", lights) + " ║");
+        WriteLine("║                                             ║");
+        WriteLine("║    [" + RGB("1", number) + "] Add New Customer                     ║");
+        WriteLine("║    [" + RGB("2", number) + "] Show Customer Details                ║");
+        WriteLine("║    [" + RGB("3", number) + "] Show Rented Movies of a Customer     ║");
+        WriteLine("║                                             ║");
+        WriteLine("║                                             ║");
+        WriteLine("║                                             ║");
+        WriteLine("║                                             ║");
+        WriteLine("║                                             ║");
+        WriteLine("║                                             ║");
+        WriteLine("╠═════════════════════════════════════════════╣");
+        WriteLine("║                                             ║");
+        WriteLine("╚═════════════════════════════════════════════╝");
+        XY(39, 21);
+
+	auto choice = Prompt<int>(RGB("Enter choice", input));
 	switch (choice)
 	{
 		case 1:
@@ -262,11 +339,20 @@ void Rental::CustomerMaintenanceMenu()
 
 void Rental::AddCustomerMenu()
 {
-	Clear();
-	Box({7, 1}, "ADD A CUSTOMER");
+      Clear();
+	Box({27, 1}, "ADD A CUSTOMER");
+        Coordinates coord = {29, 4};
+        WriteLine("Customer ID", 2);
+        WriteLine("Customer Name", 2);
+        WriteLine("Customer Address", 2);
+        XY( coord.X + 24, coord.Y);
+
 	auto id = _customers.size() + 1;
-	auto name = Prompt<std::string>("Enter customer name");
-	auto address = Prompt<std::string>("Enter customer address");
+	WriteLine(std::to_string(id),2 );
+	auto name = Prompt<std::string>("", 2);
+	auto address = Prompt<std::string>("", 2);
+	MoveCursor(CursorDirection::Left, 26);
+
 	Customer customer(id, name, address);
 	_customers.push_back(customer);
 	WriteLine("Customer added!");
@@ -274,9 +360,10 @@ void Rental::AddCustomerMenu()
 
 void Rental::ShowCustomerDetailsMenu()
 {
-	Clear();
-	Box({7, 1}, "SHOW CUSTOMER DETAILS");
-	auto id = Prompt<int>("Enter customer code: ");
+      Clear();
+	CleanBox({27, 1}, "CUSTOMER DETAILS");
+	auto id = Prompt<int>("Enter Customer ID", 2);
+        MoveCursor(CursorDirection::Left, 2);
 	auto customer = GetCustomer(id);
 	if (customer)
 	{
@@ -292,14 +379,20 @@ void Rental::ShowCustomerDetailsMenu()
 
 void Rental::ListVideosRentedMenu()
 {
-	Clear();
-	Box({7, 1}, "LIST OF VIDEOS RENTED");
-	auto id = Prompt<int>("Enter customer code: ");
+      Clear();
+	CleanBox({27, 1}, "RENTED VIDEOS LIST");
+	auto id = Prompt<int>("Enter customer code: ", 2);
+        MoveCursor(CursorDirection::Left, 2);
+
 	auto customer = GetCustomer(id);
-	if (customer)
+	if (customer && !customer->RentedVideos.empty())
 	{
 		PrintMoviesRented(*customer);
 	}
+        else if (customer && customer->RentedVideos.empty())
+        {
+            WriteLine("Customer has no videos rented!");
+        }
 	else
 	{
 		WriteLine("Customer not found!");
