@@ -1,4 +1,6 @@
 #pragma once
+#include <list>
+
 #include "json.hpp"
 #include "Movie.h"
 

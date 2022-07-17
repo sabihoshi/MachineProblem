@@ -1,11 +1,9 @@
-﻿#include <iostream>
+#include <iostream>
 #include <Windows.h>
-#pragma push_macro("max", "RGB")
 #undef max
 #undef RGB
 #include "Console.h"
 #include "Rental.h"
-#pragma pop_macro("max", "RGB")
 
 #define MoviePath "Movies.json"
 #define CustomerPath "Customers.json"
@@ -14,6 +12,7 @@ int Menu();
 
 int main()
 {
+    SetConsoleMode(ENABLE_VIRTUAL_TERMINAL_PROCESSING);
 	SetConsoleOutputCP(65001);
 
 	Rental rental;
