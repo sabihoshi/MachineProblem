@@ -33,7 +33,7 @@ void Rental::LoadCustomers(const std::string& path)
 	_customers = json.get<std::deque<Customer>>();
 }
 
-void Rental::LoadMovies(std::string path)
+void Rental::LoadMovies(const std::string& path)
 {
 	nlohmann::json json;
 
@@ -45,19 +45,19 @@ void Rental::LoadMovies(std::string path)
 
 void Rental::SaveCustomers(const std::string& path)
 {
-	nlohmann::json json = _customers;
+	const nlohmann::json json = _customers;
 	std::ofstream file(path);
 	file << json.dump(4);
 }
 
-void Rental::SaveMovies(std::string path)
+void Rental::SaveMovies(const std::string& path)
 {
-	nlohmann::json json = _movies;
+	const nlohmann::json json = _movies;
 	std::ofstream file(path);
 	file << json.dump(4);
 }
 
-void Rental::InsertMovie(Movie movie)
+void Rental::InsertMovie(const Movie& movie)
 {
 	for (auto& v : _movies)
 	{
@@ -71,10 +71,9 @@ void Rental::InsertMovie(Movie movie)
 	_movies.push_back(movie);
 }
 
-void Rental::RentMovie(Customer customer, int movieId)
+void Rental::RentMovie(Customer& customer, const int movieId)
 {
-	auto video = GetMovie(movieId);
-	if (video)
+	if (const auto video = GetMovie(movieId))
 	{
 		if (video->CanBeRented())
 		{
@@ -93,7 +92,7 @@ void Rental::RentMovie(Customer customer, int movieId)
 	}
 }
 
-void Rental::ReturnMovie(Customer customer, int movieId)
+void Rental::ReturnMovie(Customer& customer, int movieId)
 {
 	if (customer.ReturnMovie(movieId))
 	{

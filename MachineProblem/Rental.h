@@ -11,11 +11,11 @@ private:
 	std::list<Movie> _movies;
 	std::deque<Customer> _customers;
 
-	void InsertMovie(Movie movie);
+	void InsertMovie(const Movie& movie);
 
-	void RentMovie(Customer customer, int movieId);
+	void RentMovie(Customer& customer, int movieId);
 
-	void ReturnMovie(Customer customer, int movieId);
+	void ReturnMovie(Customer& customer, int movieId);
 
 	void PrintMoviesRented(Customer& customer);
 
@@ -46,11 +46,11 @@ public:
 
 	void CustomerMaintenanceMenu();
 
-	void LoadMovies(std::string path);
+	void LoadMovies(const std::string& path);
 
 	void LoadCustomers(const std::string& path);
 
-	void SaveMovies(std::string path);
+	void SaveMovies(const std::string& path);
 
 	void SaveCustomers(const std::string& path);
 };
