@@ -181,7 +181,7 @@ void Rental::InsertMovieMenu()
 {
 	Box({27, 1}, "INSERT A MOVIE", 6);
           Coordinates coord = {29, 4};
-          WriteLine("Video ID", 2);
+          WriteLine("Movie ID", 2);
           WriteLine("Movie Title", 2);
           WriteLine("Production", 2);
           WriteLine("Genre", 2);
@@ -404,7 +404,7 @@ void Rental::ListVideosRentedMenu()
 {
       Clear();
 	CleanBox({14, 1}, "RENTED VIDEOS LIST");
-	auto id = Prompt<int>("Enter customer code: ", 2);
+	auto id = Prompt<int>("Enter customer ID: ", 2);
         MoveCursor(CursorDirection::Left, 2);
 
 	auto customer = GetCustomer(id);
@@ -414,7 +414,7 @@ void Rental::ListVideosRentedMenu()
 	}
         else if (customer && customer->RentedVideos.empty())
         {
-            WriteLine("Customer has no videos rented!");
+            WriteLine("Customer has no movies rented!");
         }
 	else
 	{
