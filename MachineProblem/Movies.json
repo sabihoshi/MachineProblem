@@ -1,87 +1,98 @@
 [
     {
-        "Copies": 10,
+        "Copies": 16,
         "Id": 1,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BYmMxZWRiMTgtZjM0Ny00NDQxLWIxYWQtZDdlNDNkOTEzYTdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg",
         "Production": "Marvel Studios",
         "Title": "Thor: Love and Thunder"
     },
     {
-        "Copies": 7,
+        "Copies": 18,
         "Id": 2,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BYzMzNTJjYmMtZTkxNS00MjI4LWI3YmQtOTQ4MDZjZDJlZjQyXkEyXkFqcGdeQXVyNjc0NzQzNTM@.jpg",
         "Production": "Bazmark Films",
         "Title": "Elvis"
     },
     {
-        "Copies": 15,
+        "Copies": 5,
         "Id": 3,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BOWQwOTA1ZDQtNzk3Yi00ZmVmLWFiZGYtNjdjNThiYjJhNzRjXkEyXkFqcGdeQXVyODE5NzE3OTE@.jpg",
         "Production": "Paramount Pictures",
         "Title": "Top Gun: Maverick"
     },
     {
-        "Copies": 8,
+        "Copies": 11,
         "Id": 4,
+        "Rents": 0,
         "Genre": "Comedy",
         "Image": "MV5BZDQyODUwM2MtNzA0YS00ZjdmLTgzMjItZWRjN2YyYWE5ZTNjXkEyXkFqcGdeQXVyMTI2MzY1MjM1.jpg",
         "Production": "Universal Pictures",
         "Title": "Minions: The Rise of Gru"
     },
     {
-        "Copies": 8,
+        "Copies": 15,
         "Id": 5,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BODJhZjg3NTEtZjIzNy00NzNkLThjZDYtMzA4NjYzOWM4MWI5XkEyXkFqcGdeQXVyMDM2NDM2MQ@@.jpg",
         "Production": "20th Century Studios",
         "Title": "Amsterdam"
     },
     {
-        "Copies": 11,
+        "Copies": 15,
         "Id": 6,
+        "Rents": 0,
         "Genre": "Horror",
         "Image": "MV5BOWVmNTBiYTUtZWQ3Yi00ZDlhLTgyYjUtNzBhZjM3YjRiNGRkXkEyXkFqcGdeQXVyNzYyOTM1ODI@.jpg",
         "Production": "Universal Pictures",
         "Title": "The Black Phone"
     },
     {
-        "Copies": 4,
+        "Copies": 15,
         "Id": 7,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BOTBjMjA4NmYtN2RjMi00YWZlLTliYTktOTIwMmNkYjYxYmE1XkEyXkFqcGdeQXVyODE5NzE3OTE@.jpg",
         "Production": "Latina Pictures",
         "Title": "Jurassic World Dominion"
     },
     {
-        "Copies": 15,
+        "Copies": 5,
         "Id": 8,
+        "Rents": 0,
         "Genre": "Comedy",
         "Image": "MV5BMWRiZGQ1NDMtODQ2OS00MDlhLWJkZGYtM2ZmNjlhZThjOWRmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg",
         "Production": "Universal Pictures",
         "Title": "Sing 2"
     },
     {
-        "Copies": 13,
+        "Copies": 5,
         "Id": 9,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BOGYyZjhkYTgtYzNlNC00NWEwLWEwMmQtZWI5Y2Y4OTk5Y2YwXkEyXkFqcGdeQXVyMTM1MTE1NDMx.jpg",
         "Production": "20th Century Studios",
         "Title": "The Princess"
     },
     {
-        "Copies": 4,
+        "Copies": 17,
         "Id": 10,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BZjQxYTA3ODItNzgxMy00N2Y2LWJlZGMtMTRlM2JkZjI1ZDhhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@.jpg",
         "Production": "Paramount Pictures",
         "Title": "Top Gun"
     },
     {
-        "Copies": 17,
+        "Copies": 12,
         "Id": 11,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BZDM2YjA2ZjAtMmZmMy00NDhjLWJjYWYtYjc4ZGY0YzUzOTMyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg",
         "Production": "Netflix",
@@ -90,78 +101,88 @@
     {
         "Copies": 12,
         "Id": 12,
+        "Rents": 0,
         "Genre": "Comedy",
         "Image": "MV5BMDhkYmU0MzctMWEzNy00ODg1LWI3ZjAtMGZlZjkzNWVmMzVjXkEyXkFqcGdeQXVyMTM1MTE1NDMx.jpg",
         "Production": "Universal Pictures",
         "Title": "The Bad Guys"
     },
     {
-        "Copies": 8,
+        "Copies": 3,
         "Id": 13,
+        "Rents": 0,
         "Genre": "Sci-Fi",
         "Image": "MV5BMGQwNDNkMmItYWY1Yy00YTZmLWE5OTAtODU0MGZmMzQ1NDdkXkEyXkFqcGdeQXVyMTQxNzMzNDI@.jpg",
         "Production": "Centropolis Entertainment",
         "Title": "Independence Day"
     },
     {
-        "Copies": 4,
+        "Copies": 5,
         "Id": 14,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@.jpg",
         "Production": "Paramount Pictures",
         "Title": "The Godfather"
     },
     {
-        "Copies": 3,
+        "Copies": 15,
         "Id": 15,
+        "Rents": 0,
         "Genre": "Comedy",
         "Image": "MV5BYjdhYTE3NjMtZjI3OC00NzVlLWFiNTUtNzQ3NDNiNTI3NDg4XkEyXkFqcGdeQXVyMTEyMjM2NDc2.jpg",
         "Production": "Roth Films",
         "Title": "Hustle"
     },
     {
-        "Copies": 9,
+        "Copies": 11,
         "Id": 16,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BZjgwZDIwY2MtNGZlNy00NGRlLWFmNTgtOTBkZThjMDUwMGJhXkEyXkFqcGdeQXVyMTEyMjM2NDc2.jpg",
         "Production": "Film4",
         "Title": "Last Night in Soho"
     },
     {
-        "Copies": 19,
+        "Copies": 6,
         "Id": 17,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BNDVkZTc4OTktNTAyOC00MzQxLThiZjMtM2M3MTlmYzFjY2FkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg",
         "Production": "Grand Electric",
         "Title": "Spiderhead"
     },
     {
-        "Copies": 3,
+        "Copies": 4,
         "Id": 18,
+        "Rents": 0,
         "Genre": "Adventure",
         "Image": "MV5BYTg2Zjk0ZTctM2ZmMi00MDRmLWJjOGYtNWM0YjBmZTBjMjRkXkEyXkFqcGdeQXVyMTM1MTE1NDMx.jpg",
         "Production": "Pixar",
         "Title": "Lightyear"
     },
     {
-        "Copies": 5,
+        "Copies": 18,
         "Id": 19,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@.jpg",
         "Production": "Warner Bros",
         "Title": "The Batman"
     },
     {
-        "Copies": 7,
+        "Copies": 18,
         "Id": 20,
+        "Rents": 0,
         "Genre": "Mystery",
         "Image": "MV5BMGIyNTI3NWItNTJkOS00MGYyLWE4NjgtZDhjMWQ4Y2JkZTU5XkEyXkFqcGdeQXVyNjY1MTg4Mzc@.jpg",
         "Production": "Universal Pictures",
         "Title": "Nope"
     },
     {
-        "Copies": 9,
+        "Copies": 11,
         "Id": 21,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BMzVlMmY2NTctODgwOC00NDMzLWEzMWYtM2RiYmIyNTNhMTI0XkEyXkFqcGdeQXVyNTAzNzgwNTg@.jpg",
         "Production": "Universal Pictures",
@@ -170,6 +191,7 @@
     {
         "Copies": 16,
         "Id": 22,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@.jpg",
         "Production": "Marvel Studios",
@@ -178,206 +200,232 @@
     {
         "Copies": 15,
         "Id": 23,
+        "Rents": 0,
         "Genre": "Adventure",
         "Image": "MV5BODkyYTRlMDItMDlhMC00MzkzLWI3NzQtOGVlMjdjYThlNDM3XkEyXkFqcGdeQXVyMTA1OTcyNDQ4.jpg",
         "Production": "Netflix",
         "Title": "The Sea Beast"
     },
     {
-        "Copies": 6,
+        "Copies": 3,
         "Id": 24,
+        "Rents": 0,
         "Genre": "Horror",
         "Image": "MV5BMTJiMmE5YWItOWZjYS00YTg0LWE0MTYtMzg2ZTY4YjNkNDEzXkEyXkFqcGdeQXVyMTAzMDg4NzU0.jpg",
         "Production": "A24",
         "Title": "X"
     },
     {
-        "Copies": 10,
+        "Copies": 3,
         "Id": 25,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BZGQ2ZDNiMjgtMTNhNS00MjUxLWFkYTMtYTI1OTE0MmQ2MmJkXkEyXkFqcGdeQXVyMTM1MTE1NDMx.jpg",
         "Production": "DNA Films",
         "Title": "Men"
     },
     {
-        "Copies": 18,
+        "Copies": 16,
         "Id": 26,
+        "Rents": 0,
         "Genre": "History",
         "Image": "MV5BNDYwYjMwMTEtMjY5MS00NGJjLTlmODMtNmZhMTc4ZDkwODhhXkEyXkFqcGdeQXVyMzQ0NDM5NTk@.jpg",
         "Production": "Entertainment One",
         "Title": "The Woman King"
     },
     {
-        "Copies": 14,
+        "Copies": 13,
         "Id": 27,
+        "Rents": 0,
         "Genre": "Adventure",
         "Image": "MV5BMmIwYzFhODAtY2I1YS00ZDdmLTkyYWQtZjI5NDIwMDc2MjEyXkEyXkFqcGdeQXVyODk4OTc3MTY@.jpg",
         "Production": "Paramount Pictures",
         "Title": "The Lost City"
     },
     {
-        "Copies": 4,
+        "Copies": 3,
         "Id": 28,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BMDU2ZmM2OTYtNzIxYy00NjM5LTliNGQtN2JmOWQzYTBmZWUzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg",
         "Production": "87North",
         "Title": "Bullet Train"
     },
     {
-        "Copies": 15,
+        "Copies": 4,
         "Id": 29,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BNTA3N2Q0ZTAtODJjNy00MmQzLWJlMmItOGFmNDI0ODgxN2QwXkEyXkFqcGdeQXVyMTM0NTUzNDIy.jpg",
         "Production": "Columbia Pictures",
         "Title": "Morbius"
     },
     {
-        "Copies": 12,
+        "Copies": 11,
         "Id": 30,
+        "Rents": 0,
         "Genre": "Comedy",
         "Image": "MV5BNTAxZjU2MWUtMmE3Ny00MTkyLTlhYzgtYTcxNjUzNzJiY2Y3XkEyXkFqcGdeQXVyMTMwMDA5ODU3.jpg",
         "Production": "Bondlt Media Capital",
         "Title": "Clerks III"
     },
     {
-        "Copies": 16,
+        "Copies": 15,
         "Id": 31,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BODUwNDNjYzctODUxNy00ZTA2LWIyYTEtMDc5Y2E5ZjBmNTMzXkEyXkFqcGdeQXVyODE5NzE3OTE@.jpg",
         "Production": "DVV Entertainment",
         "Title": "RRR"
     },
     {
-        "Copies": 11,
+        "Copies": 10,
         "Id": 32,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BYWI2ODNjMDktZjcxNS00YThkLTljMDUtMGIyOTg3ZjY2MjlhXkEyXkFqcGdeQXVyODE5NzE3OTE@.jpg",
         "Production": "Adivi Entertainment",
         "Title": "Major"
     },
     {
-        "Copies": 14,
+        "Copies": 3,
         "Id": 33,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BMDdhYzNkOWQtYWNlNi00NDdjLWJlZDMtMjJjZDYyNjAxM2U1XkEyXkFqcGdeQXVyMTQyMTMwOTk0.jpg",
         "Production": "Ekipa",
         "Title": "365 Days"
     },
     {
-        "Copies": 3,
+        "Copies": 12,
         "Id": 34,
+        "Rents": 0,
         "Genre": "Comedy",
         "Image": "MV5BN2VjNDQ4MDctMDY3Yy00MmZmLTlhM2MtMWE4NjJhZTlmNTAxL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@.jpg",
         "Production": "Dreamworks Pictures",
         "Title": "Old School"
     },
     {
-        "Copies": 16,
+        "Copies": 15,
         "Id": 35,
+        "Rents": 0,
         "Genre": "Sci-Fi",
         "Image": "MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@.jpg",
         "Production": "Universal Pictures",
         "Title": "Jurassic Park"
     },
     {
-        "Copies": 17,
+        "Copies": 9,
         "Id": 36,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BMTNkNjU4OGYtODM3NS00NzM1LWFkZWItZTExNzdjYTAwMmRlXkEyXkFqcGdeQXVyMTE1MzI2NzIz.jpg",
         "Production": "Lost City",
         "Title": "Watcher"
     },
     {
-        "Copies": 12,
+        "Copies": 8,
         "Id": 37,
+        "Rents": 0,
         "Genre": "Fantasy",
         "Image": "MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@.jpg",
         "Production": "Marvel Studios",
         "Title": "Thor"
     },
     {
-        "Copies": 11,
+        "Copies": 10,
         "Id": 38,
+        "Rents": 0,
         "Genre": "Action",
         "Image": "MV5BMWEwNjhkYzYtNjgzYy00YTY2LThjYWYtYzViMGJkZTI4Y2MyXkEyXkFqcGdeQXVyNTM0OTY1OQ@@.jpg",
         "Production": "Columbia Pictures",
         "Title": "Uncharted"
     },
     {
-        "Copies": 3,
+        "Copies": 4,
         "Id": 39,
+        "Rents": 0,
         "Genre": "Comedy",
         "Image": "MV5BMTg2MTMyMzU0M15BMl5BanBnXkFtZTgwOTU3ODk4NTE@.jpg",
         "Production": "Universal Pictures",
         "Title": "Minions"
     },
     {
-        "Copies": 8,
+        "Copies": 5,
         "Id": 40,
+        "Rents": 0,
         "Genre": "Adventure",
         "Image": "MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg",
         "Production": "Warner Bros",
         "Title": "Dune"
     },
     {
-        "Copies": 3,
+        "Copies": 17,
         "Id": 41,
+        "Rents": 0,
         "Genre": "Thriller",
         "Image": "MV5BMmVmODY1MzEtYTMwZC00MzNhLWFkNDMtZjAwM2EwODUxZTA5XkEyXkFqcGdeQXVyNTAyODkwOQ@@.jpg",
         "Production": "Universal Pictures",
         "Title": "Jaws"
     },
     {
-        "Copies": 7,
+        "Copies": 12,
         "Id": 42,
+        "Rents": 0,
         "Genre": "Adventure",
         "Image": "MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@.jpg",
         "Production": "marvel Studios",
         "Title": "Avengers: Endgame"
     },
     {
-        "Copies": 5,
+        "Copies": 17,
         "Id": 43,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@.jpg",
         "Production": "Warner Bros",
         "Title": "Goodfellas"
     },
     {
-        "Copies": 11,
+        "Copies": 19,
         "Id": 44,
+        "Rents": 0,
         "Genre": "Thriller",
         "Image": "MV5BMWVmOTAyMmMtY2U3Yi00MmE3LWE4ZjItMzZmZDc1ZDUwMzJlXkEyXkFqcGdeQXVyMDA4NzMyOA@@.jpg",
         "Production": "Buffalo 8 Productions",
         "Title": "Hot Seat"
     },
     {
-        "Copies": 12,
+        "Copies": 11,
         "Id": 45,
+        "Rents": 0,
         "Genre": "Horror",
         "Image": "MV5BZDVkZmI0YzAtNzdjYi00ZjhhLWE1ODEtMWMzMWMzNDA0NmQ4XkEyXkFqcGdeQXVyNzYzODM3Mzg@.jpg",
         "Production": "Vertigo Entertainment",
         "Title": "It"
     },
     {
-        "Copies": 11,
+        "Copies": 4,
         "Id": 46,
+        "Rents": 0,
         "Genre": "Drama",
         "Image": "MV5BNmU3ZTJjMTEtYzc2Ny00YjVhLTkyYmQtZTFhYWY0N2MxMzkxXkEyXkFqcGdeQXVyMTM1MTE1NDMx.jpg",
         "Production": "Plattform Produktion",
         "Title": "Pleasure"
     },
     {
-        "Copies": 8,
+        "Copies": 14,
         "Id": 47,
+        "Rents": 0,
         "Genre": "Fantasy",
         "Image": "MV5BYzVjYThmNDAtOTE1NC00YjQ2LTk4NWYtNTc4Yzc4OTRhYjllXkEyXkFqcGdeQXVyMDM2NDM2MQ@@.jpg",
         "Production": "Marvel Studios",
         "Title": "Eternals"
     },
     {
-        "Copies": 12,
+        "Copies": 19,
         "Id": 48,
+        "Rents": 0,
         "Genre": "Sci-Fi",
         "Image": "MV5BMTU2NjQyNDY1Ml5BMl5BanBnXkFtZTcwMTk1MDU1MQ@@.jpg",
         "Production": "Dimension Films",
@@ -386,6 +434,7 @@
     {
         "Copies": 18,
         "Id": 49,
+        "Rents": 0,
         "Genre": "Fantasy",
         "Image": "MV5BODdkMDQzMzItZDc4YS00OGM4LTkxNTQtNjUzNzU0ZmJkMWY2XkEyXkFqcGdeQXVyMjMxOTE0ODA@.jpg",
         "Production": "Millennium Films",
