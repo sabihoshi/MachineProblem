@@ -117,8 +117,10 @@ public:
 			auto half = _column_sizes[i] / 2;
 			half -= _headers[i].size() / 2;
 
-			stream << std::string(_cell_padding, ' ') << std::setw(_column_sizes[i]) << std::left
-				<< std::string(half, ' ') + _headers[i] << std::string(_cell_padding, ' ') << "║";
+			stream
+				<< std::string(_cell_padding, ' ') << std::setw(_column_sizes[i])
+			    << std::left << std::string(half, ' ') + _headers[i]
+			    << std::string(_cell_padding, ' ') << "║";
 		}
 		LoadXY();
 		MoveCursor(CursorDirection::Down);

@@ -1,85 +1,83 @@
 [
-    [
-        {
-            "Copies": 7,
-            "Genre": "Action",
-            "Id": 1,
-            "Image": "foo",
-            "Production": "Marvel Studios",
-            "Rents": 0,
-            "Title": "Thor: Love and Thunder"
-        },
-        {
-            "Copies": 21,
-            "Genre": "Drama",
-            "Id": 2,
-            "Image": "foo",
-            "Production": "Bazmark Films",
-            "Rents": 0,
-            "Title": "Elvis"
-        },
-        {
-            "Copies": 10,
-            "Genre": "Action",
-            "Id": 3,
-            "Image": "foo",
-            "Production": "Paramount Pictures",
-            "Rents": 0,
-            "Title": "Top Gun: Maverick"
-        },
-        {
-            "Copies": 3,
-            "Genre": "Comedy",
-            "Id": 4,
-            "Image": "foo",
-            "Production": "Universal Pictures",
-            "Rents": 0,
-            "Title": "Minions: The Rise of Gru"
-        },
-        {
-            "Copies": 8,
-            "Genre": "Drama",
-            "Id": 5,
-            "Image": "foo",
-            "Production": "20th Century Studios",
-            "Rents": 0,
-            "Title": "Amsterdam"
-        },
-        {
-            "Copies": 3,
-            "Genre": "Horror",
-            "Id": 6,
-            "Image": "foo",
-            "Production": "Universal Pictures",
-            "Rents": 0,
-            "Title": "The Black Phone"
-        },
-        {
-            "Copies": 5,
-            "Genre": "Action",
-            "Id": 7,
-            "Image": "foo",
-            "Production": "Latina Pictures",
-            "Rents": 0,
-            "Title": "Jurassic World Dominion"
-        },
-        {
-            "Copies": 2,
-            "Genre": "Comedy",
-            "Id": 8,
-            "Image": "foo",
-            "Production": "Universal Pictures",
-            "Rents": 0,
-            "Title": "Sing 2"
-        },
-        {
-            "Copies": 7,
-            "Genre": "Action",
-            "Id": 9,
-            "Image": "foo",
-            "Production": "20th Century Studios",
-            "Rents": 0,
-            "Title": "The Princess"
-        }
-    ]
+    {
+        "Copies": 7,
+        "Genre": "Action",
+        "Id": 1,
+        "Image": "foo",
+        "Production": "Marvel Studios",
+        "Rents": 0,
+        "Title": "Thor: Love and Thunder"
+    },
+    {
+        "Copies": 21,
+        "Genre": "Drama",
+        "Id": 2,
+        "Image": "foo",
+        "Production": "Bazmark Films",
+        "Rents": 0,
+        "Title": "Elvis"
+    },
+    {
+        "Copies": 10,
+        "Genre": "Action",
+        "Id": 3,
+        "Image": "foo",
+        "Production": "Paramount Pictures",
+        "Rents": 0,
+        "Title": "Top Gun: Maverick"
+    },
+    {
+        "Copies": 3,
+        "Genre": "Comedy",
+        "Id": 4,
+        "Image": "foo",
+        "Production": "Universal Pictures",
+        "Rents": 0,
+        "Title": "Minions: The Rise of Gru"
+    },
+    {
+        "Copies": 8,
+        "Genre": "Drama",
+        "Id": 5,
+        "Image": "foo",
+        "Production": "20th Century Studios",
+        "Rents": 0,
+        "Title": "Amsterdam"
+    },
+    {
+        "Copies": 3,
+        "Genre": "Horror",
+        "Id": 6,
+        "Image": "foo",
+        "Production": "Universal Pictures",
+        "Rents": 0,
+        "Title": "The Black Phone"
+    },
+    {
+        "Copies": 5,
+        "Genre": "Action",
+        "Id": 7,
+        "Image": "foo",
+        "Production": "Latina Pictures",
+        "Rents": 0,
+        "Title": "Jurassic World Dominion"
+    },
+    {
+        "Copies": 2,
+        "Genre": "Comedy",
+        "Id": 8,
+        "Image": "foo",
+        "Production": "Universal Pictures",
+        "Rents": 0,
+        "Title": "Sing 2"
+    },
+    {
+        "Copies": 7,
+        "Genre": "Action",
+        "Id": 9,
+        "Image": "foo",
+        "Production": "20th Century Studios",
+        "Rents": 0,
+        "Title": "The Princess"
+    }
 ]
