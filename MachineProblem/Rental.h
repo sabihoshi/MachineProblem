@@ -11,7 +11,7 @@ private:
 	std::list<Movie> _movies;
 	std::deque<Customer> _customers;
 
-	void InsertMovie(const Movie& movie);
+	bool InsertMovie(const Movie& movie);
 
 	void RentMovie(Customer& customer, int movieId);
 

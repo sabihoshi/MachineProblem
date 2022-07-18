@@ -23,9 +23,9 @@ public:
 
 	Movie(int id, std::string title, std::string production, std::string genre, std::string image, int copies);
 
-	void RentVideo();
+	void RentMovie();
 
-	void ReturnVideo();
+	void ReturnMovie();
 
 	bool operator==(const Movie& other) const;
 

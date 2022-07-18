@@ -9,12 +9,12 @@ Movie::Movie(const int id, std::string title, std::string production, std::strin
 	Production(std::move(production)), Genre(std::move(genre)),
 	Image(std::move(image)) { }
 
-void Movie::RentVideo()
+void Movie::RentMovie()
 {
 	Rents++;
 }
 
-void Movie::ReturnVideo()
+void Movie::ReturnMovie()
 {
 	Rents--;
 }

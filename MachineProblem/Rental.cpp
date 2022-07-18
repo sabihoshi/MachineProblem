@@ -76,29 +76,34 @@ void Rental::SaveMovies(const std::string& path)
 	file << json.dump(4);
 }
 
-void Rental::InsertMovie(const Movie& movie)
+bool Rental::InsertMovie(const Movie& movie)
 {
 	for (auto& v : _movies)
 	{
 		if (v == movie)
 		{
 			WriteLine("Movie already exists!");
-			return;
+			return false;
 		}
 	}
 
 	_movies.push_back(movie);
+	return true;
 }
 
 void Rental::RentMovie(Customer& customer, const int movieId)
 {
-	if (const auto video = GetMovie(movieId))
+	if (const auto movie = GetMovie(movieId))
 	{
-		if (video->CanBeRented())
+		if (movie->CanBeRented())
 		{
 			customer.RentMovie(movieId);
-			video->RentVideo();
+			movie->RentMovie();
 			WriteLine("Movie rented!");
+
+			auto table = Movie::GetTable();
+			table.Add(*movie);
+			table.Print();
 		}
 		else
 		{
@@ -115,9 +120,13 @@ void Rental::ReturnMovie(Customer& customer, int movieId)
 {
 	if (customer.ReturnMovie(movieId))
 	{
-		const auto video = GetMovie(movieId);
-		video->ReturnVideo();
+		const auto movie = GetMovie(movieId);
+		movie->ReturnMovie();
 		WriteLine("Movie returned!");
+
+		auto table = Movie::GetTable();
+		table.Add(*movie);
+		table.Print();
 	}
 	else
 	{
@@ -185,7 +194,12 @@ void Rental::InsertMovieMenu()
 	MoveCursor(CursorDirection::Left, 26);
 
 	Movie movie(id, title, production, genre, image, copies);
-	InsertMovie(movie);
+	if(InsertMovie(movie))
+	{
+		auto table = Movie::GetTable();
+		table.Add(movie);
+		table.Print();
+	}
 }
 
 void Rental::RentMovieMenu()
