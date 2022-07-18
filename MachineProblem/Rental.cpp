@@ -380,7 +380,7 @@ void Rental::ShowCustomerDetailsMenu()
 void Rental::ListVideosRentedMenu()
 {
       Clear();
-	CleanBox({27, 1}, "RENTED VIDEOS LIST");
+	CleanBox({14, 1}, "RENTED VIDEOS LIST");
 	auto id = Prompt<int>("Enter customer code: ", 2);
         MoveCursor(CursorDirection::Left, 2);
 
