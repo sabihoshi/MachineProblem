@@ -36,9 +36,7 @@ public:
 
 	void ReturnMovieMenu();
 
-	void PrintMoviesRentedMenu();
-
-	void PrintMovieMenu();
+    void PrintMovieMenu();
 
 	void PrintAllMoviesMenu();
 
