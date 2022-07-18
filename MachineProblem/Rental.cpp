@@ -107,7 +107,12 @@ void Rental::RentMovie(Customer& customer, const int movieId)
 		}
 		else
 		{
+
 			WriteLine("Movie is not available!");
+
+                        auto table = Movie::GetTable();
+                        table.Add(*movie);
+                        table.Print();
 		}
 	}
 	else
@@ -234,7 +239,7 @@ void Rental::ReturnMovieMenu()
 
 	auto customerId = Prompt<int>("", 2);
 	auto movieId = Prompt<int>("", 2);
-	MoveCursor(CursorDirection::Left, 24);
+	MoveCursor(CursorDirection::Left, 26);
 
 	auto movie = GetMovie(movieId);
 	auto customer = GetCustomer(customerId);
@@ -290,6 +295,10 @@ void Rental::CheckMovieAvailabilityMenu()
 	if (movie && movie->CanBeRented())
 	{
 		WriteLine("Movie is available!");
+
+                auto table = Movie::GetTable();
+                table.Add(*movie);
+                table.Print();
 	}
 	else
 	{
